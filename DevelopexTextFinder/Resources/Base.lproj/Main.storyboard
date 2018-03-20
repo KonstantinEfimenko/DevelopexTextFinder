@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Parameters Screen View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ParametersScreenViewController" customModule="DevelopexTextFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://www.ukr.net" borderStyle="roundedRect" placeholder="Start search from URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EON-n7-32A">
+                                <rect key="frame" x="16" y="36" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="f4k-5V-zBS"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" placeholder="Threads" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TjZ-yZ-9nQ">
+                                <rect key="frame" x="16" y="82" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CiS-mQ-8yi"/>
+                                    <constraint firstAttribute="width" constant="100" id="ZKd-lw-3Qm"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="percent" borderStyle="roundedRect" placeholder="Text to find" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7dg-v0-ygj">
+                                <rect key="frame" x="16" y="128" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="s84-tb-rnb"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" placeholder="Max URL count" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2us-Rg-e6Y">
+                                <rect key="frame" x="16" y="174" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="VS1-io-mnD"/>
+                                    <constraint firstAttribute="height" constant="30" id="jgB-Qz-AWU"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDW-uX-MvI">
+                                <rect key="frame" x="137" y="220" width="100" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="EhO-ft-A9u"/>
+                                </constraints>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="onStartButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qr0-iG-Zj4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaJ-7b-h4r">
+                                <rect key="frame" x="280" y="220" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="onStopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vCG-BT-7Rr"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iEl-SK-6ZL">
+                                <rect key="frame" x="0.0" y="266" width="375" height="401"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="2bZ-hp-rsN"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7mu-EO-U9H"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TjZ-yZ-9nQ" firstAttribute="top" secondItem="EON-n7-32A" secondAttribute="bottom" constant="16" id="0XR-9z-FQj"/>
+                            <constraint firstItem="7dg-v0-ygj" firstAttribute="top" secondItem="TjZ-yZ-9nQ" secondAttribute="bottom" constant="16" id="1Pa-68-Pvp"/>
+                            <constraint firstItem="iEl-SK-6ZL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="60w-d3-2vu"/>
+                            <constraint firstItem="iEl-SK-6ZL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BVL-0e-5Xd"/>
+                            <constraint firstItem="2us-Rg-e6Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Bh3-Pb-hrp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7dg-v0-ygj" secondAttribute="trailing" constant="16" id="MpT-Xc-oi9"/>
+                            <constraint firstItem="7dg-v0-ygj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="SHV-W3-fqY"/>
+                            <constraint firstItem="EON-n7-32A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aKb-9K-Un8"/>
+                            <constraint firstItem="jDW-uX-MvI" firstAttribute="top" secondItem="2us-Rg-e6Y" secondAttribute="bottom" constant="16" id="bh2-yz-5M8"/>
+                            <constraint firstItem="jDW-uX-MvI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="d6X-Ja-Nu0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EON-n7-32A" secondAttribute="trailing" constant="16" id="gdq-Lf-7gG"/>
+                            <constraint firstItem="2us-Rg-e6Y" firstAttribute="top" secondItem="7dg-v0-ygj" secondAttribute="bottom" constant="16" id="hvU-Hn-ro8"/>
+                            <constraint firstItem="iEl-SK-6ZL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jcw-gk-c8P"/>
+                            <constraint firstItem="EON-n7-32A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="oxJ-QT-iQd"/>
+                            <constraint firstItem="TjZ-yZ-9nQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vjI-Yg-Ebc"/>
+                            <constraint firstItem="iEl-SK-6ZL" firstAttribute="top" secondItem="jDW-uX-MvI" secondAttribute="bottom" constant="16" id="yUd-TI-GzR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="maxUrlCountField" destination="2us-Rg-e6Y" id="tdW-oP-xht"/>
+                        <outlet property="numberOfThreadsField" destination="TjZ-yZ-9nQ" id="8XL-to-MIb"/>
+                        <outlet property="searchTextField" destination="7dg-v0-ygj" id="Qzf-ZW-aYV"/>
+                        <outlet property="startButton" destination="jDW-uX-MvI" id="FRs-RO-7Oa"/>
+                        <outlet property="startSearchUrlField" destination="EON-n7-32A" id="vQY-Qn-Kva"/>
+                        <outlet property="tableView" destination="iEl-SK-6ZL" id="D9t-tR-JaH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
